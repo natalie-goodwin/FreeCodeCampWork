@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Application Programming Interfaces (API)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <!--Interfaces allow users to control the way an object 
+        or site works; graphical user interface is what helps user 
+        to operate a laptop, tablet, or cell phone; user inteacts with the
+        buttons and that's how the user operates the technology.Ways to 
+        communicate with an object-->
+        <!--API gives developer access to data; Represational State 
+            Transfer (REST): Remote API; The browser is a web client connecting to
+            a web server; you put a universal resource locator or univeral resource indicator
+            in the search bar : http (hypertext transfer protocol); a 
+            protocol defines the expectations of how to communicate; it 
+            uses the 'get' verb to clarify that the request will only receive 
+            data, not make changes; server receives the clients request and generates the
+            web page sending back a response to the client; the body contains the HTML
+            the browser then renders the page; HTTP is a stateless protocol; once
+            the request receives a response, it's all done; if your client wants to
+            manage that state, it needs to send it up with new 
+            requests; 'post' means you are posting data to the server
+            Headers: key and value pairs; used to help communicate what 
+            is wanted; allows gor caching; status code lets you know what happened
+            on server side; REST: APIs that meet REST's architectural
+            constraints are considered to be restful -->
+            <!--Client-Server Architecture and Statelessness: Program makes a 
+            request to a erver using HTTP; It is stateless which means the 
+            server won't remember anything about the particular client; to maintain state 
+            (like loggin 
+            details) you must send it with each and every request and you 
+            do this using headers.
+            Resource collections: CRUD; JSON nests data; every program has a
+            way to turn a JSON string into a native object; get, put, post, patch,
+            delete stae the intention of your request
+                Layered System 
+                Cacheability
+                Uniform Design
+                Code on Demand
+                
+                Software Developer Kits (SDKs)-- Helper 
+                Libraries; Then is the method for promises
+                
+                CRUD    ==> VERBS(Methods/Operations)
+                Create      Post submit data to be processed to a specified resource; takes an action and attribute
+                Read        Get retrieve data from a specified resource
+                Update      Put updates a specified resource
+                Delete      Delete deletes a specified resource on the server
+                
+                Head: same as get, but it doesn't return a body
+                Options: returns the supported HTTP methods
+                Patch: updates partial resources
+                
+            Request: Header, Operation, Endpoint, 
+            Parameters/Body
+            From the server, you receive a respone: 
+            usually in JSON data 
+
+
+            API: contract by one piece of software to 
+            another piece of software; 
+            one piece of software says give me this information 
+            formatted in this way and I'll give you this data or 
+            function or response  
+            
+            REST: Representational State Transfer; Architecture 
+            Style for designing networked applications; relies on a 
+            stateless, client-server protocol, almost always 
+            HTTP; Treats server objects as resources that 
+            can be created or destroyed; can be used by 
+            virtually any programming language
+
+            It's restful if it conforms to the REST 
+            constraints
+            
+            AJAX: Web Development Technique; The use of the XML HTTP request object to 
+            communicate with service; sends and receives information
+            in various formats; JSON, XML, HTML, or text files; XML 
+            has been mostly replaced by JSON
+        -->
+        <button onclick="showCountries">Show Countries</button>
+        <script src="apis.js"></script>
+    </body>
+</html>
