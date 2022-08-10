@@ -1,0 +1,11 @@
+/*Any css written here affects the
+entire page, not just a single component */
+
+.highlight {
+    background-color: aqua;
+}
+
+.navbar-style {
+    background-color:rgb(61, 196, 196)  !important; /*important means
+    this overwrites the original code */
+}
