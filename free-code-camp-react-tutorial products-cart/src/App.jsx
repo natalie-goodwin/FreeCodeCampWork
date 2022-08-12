@@ -4,14 +4,14 @@ wrap the component in braces "{}NavBar"; this
 happens if the class being used is NOT exported 
 as a default; if yuo export as a default, 
 you must remove the braces*/
-import MainContent from "./MainContent";
+import ShoppingCart from "./ShoppingCart.jsx";
 
 export default class App extends Component {
   render() {
     return (
       <React.Fragment>
         <NavBar />
-        <MainContent />
+        <ShoppingCart />
       </React.Fragment>
     );
   }

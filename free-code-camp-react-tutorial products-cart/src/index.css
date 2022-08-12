@@ -24,3 +24,7 @@ entire page, not just a single component */
     color: orange;
     font-size: 30px;
 }
+
+.hand-icon {
+    cursor:pointer;
+}
