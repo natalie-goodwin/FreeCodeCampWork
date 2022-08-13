@@ -1,19 +1,25 @@
 import React, { Component } from "react";
 
 export default class Product extends Component {
-  state = {
-    product: this.props.product,
-  }; /*this allows for supplying all properties; if you want 
+  constructor(props) {
+    super(props);
+
+    //console.log("Constructor-Product");
+
+    this.state = {
+      product: this.props.product,
+    };
+  } /*this allows for supplying all properties; if you want 
   to supply only individual properties, it is better to type out
   property (ex: this.props.id, this.props.price) */
 
   render() {
-    console.log(
-      this.props
-    ); /*with console.log you don't see key because it is only accessible internally by react to 
-        identify each instance of the element; react identifies 
-        which element is being added, removed, or changed by 
-        using key internally */
+    //console.log(this.props); /*with console.log you don't see key because it is only accessible internally by react to
+    // identify each instance of the element; react identifies
+    // which element is being added, removed, or changed by
+    // using key internally */
+    //console.log("render-Product");
+
     return (
       <div className="col-lg-6">
         {/*it has to take up 6 columns on larger devices 
@@ -23,15 +29,16 @@ export default class Product extends Component {
           <div className="card-body">
             <div className="text-muted">
               #{this.state.product.id}
-              <span className="pull-right hand-icon" 
-              onClick={() => {
-                this.props.onDelete(this.state.product);
-              }} /*when user clicks this span tag, it calls the onDelete method in
+              <span
+                className="pull-right hand-icon"
+                onClick={() => {
+                  this.props.onDelete(this.state.product);
+                }} /*when user clicks this span tag, it calls the onDelete method in
               the parent component and supplies current product as an argument which
               will be deleted in the parent component; user clicks the delte
               in the child and calls on the parent delte method and removing
               the product based on index, then re-renders */
-            > 
+              >
                 <i className="fa fa-times"></i>
               </span>
               {/*creates an x in the upper right corner 
@@ -96,4 +103,20 @@ export default class Product extends Component {
     of the other component; you can change state using setState 
     method  */
   }
+
+  /*Each time the child component phase will be 
+  executed after the render method of the component*/
+
+  // componentDidMount() {
+  //   console.log("componentDidMount-Product");
+  // }
+
+  // componentDidUpdate() {
+  //   console.log("componentDidUpdate-Product");
+  // }
+  // /*Executes when current instance of curren component
+  // is being deleted from memory */
+  // componentWillUnmount() {
+  //   console.log("componentWillUnmount-Product");
+  // }
 }
