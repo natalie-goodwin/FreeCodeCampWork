@@ -1,0 +1,100 @@
+/*.title {
+    color: red;
+}
+
+.subtitle {
+    color: green;
+}
+
+#example {
+    color: brown;
+} */
+
+
+
+h2:hover {
+    color: blue;
+}
+
+.aboutme {
+    color: blue;
+}
+
+/*this prevails even though the h2 is listed as red because element
+selectors are more powerful and specific than class */
+
+.subtitle {
+    color: red;
+}
+
+#services {
+    color: green;
+}
+
+/*id is more specific than class */
+
+/* Order of specificity: 
+headers (4)
+class (3)
+id (2)
+in-line styling (1) */
+
+
+/*li:first-child {
+    color: steelblue;
+}
+
+
+li:last-child {
+    color: gold;
+}
+
+li:nth-child(2) {
+    color: coral
+        /*2nd child of element is this color  */
+
+/*}
+
+li:nth-child(3) {
+    color: darkblue;
+}
+
+/*li:only-child {
+    color: brown;
+}*/
+
+/*#google-link:link {
+    color: blue;
+}
+
+/*unvisited link */
+
+/*#google-link:visited {
+    color: red;
+}*/
+
+/*visited link*/
+
+
+h3 + a {
+    color: red;
+}
+
+textarea ~ button  {
+    color: green;
+}
+/*every buttton after a text area, but they are in the same parent */
+
+
+/*every anchor tag that follows an h3 */
+
+
+ul > li {
+
+    color: blue;
+} /*every li inside of a ul*/
+
+ul li {
+    color: green;
+} /*li is direct child of ul, but another li is the child of an ol which
+is the great-grandchild of the ul and it goes back up the list  */
