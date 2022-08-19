@@ -49,21 +49,83 @@
 // countdown()
 
 
-function awesomeJavaScript() {
-    console.log(42)
+// function awesomeJavaScript() {
+//     console.log(42)
+// }
+
+// awesomeJavaScript()
+
+
+// let lap1 = 34
+// let lap2 = 33
+// let lap3 = 36
+
+// function totalLapSum () {
+//     console.log(lap1 + lap2 + lap3)
+// }
+
+// totalLapSum()
+
+// /* or 2nd way below  */ 
+
+// function totalLapSum () {
+//     let totalTime = lap1 + lap2 + lap3
+//     console.log(totalTime)
+// }
+
+// totalLapSum()
+
+/*the problem with the 2nd way is that if
+you try to console.log(totalTime) outside 
+of the function, it is outside that block
+of code, and only exists within that block
+of code  */
+
+// let lapsCompleted  = 0
+
+// function totalLapsCompleted (){
+//     lapsCompleted = lapsCompleted + 1
+//     //console.log(lapsCompleted)
+// }
+
+// totalLapsCompleted()
+// totalLapsCompleted()
+// totalLapsCompleted()
+
+// console.log(lapsCompleted)
+
+
+
+/*This code allows us to increment the button */ 
+let countEl= document.getElementById("count-el")
+
+let count = 0
+
+function increment() { /*function to increment a count 
+and attach to button */
+    count = count + 1 
+    countEl.innerText = count
 }
 
-awesomeJavaScript()
+increment()
 
 
+function save() { /*saves the count you increment, when clicked */
+    console.log(count)
+
+}
+
+let userName = "Jane"
+let message = "You have three new notifications"
+
+let messageToUser = message + ", " + userName + "!"
+console.log(messageToUser)
 
 
+let myName = "Natalie"
+let greeting = "Hi, my name is " 
 
+let message2 = greeting + myName
 
-
-
-
-
-
-
+console.log(message2)
 
