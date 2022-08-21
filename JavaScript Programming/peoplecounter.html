@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>People Counter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">People Entered</h5>
+                  <h3 id="count-el">0</h3>
+                  <button type="button" class="btn btn-primary" id = "increment-btn" onclick="increment()">INCREMENT</button> &nbsp;
+                  <button type="button" class="btn btn-primary" id = "save-btn" onclick="save()">SAVE</button>
+                  <p id="save-el">Previous entries: </p>               
+                </div>
+              </div>
+
+       <!-- <p id="welcome-el"></p>-->
+
+
+
+        <!--Scripts-->
+        <script src="peoplecounter.js""></script> 
+    </body>
+</html>

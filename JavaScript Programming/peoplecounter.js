@@ -97,35 +97,105 @@ of code  */
 
 
 /*This code allows us to increment the button */ 
+let saveEl=document.getElementById("save-el")
+
+console.log(saveEl)
+
 let countEl= document.getElementById("count-el")
 
 let count = 0
 
-function increment() { /*function to increment a count 
+function increment() { /*function to increment 
+a count 
 and attach to button */
-    count = count + 1 
-    countEl.innerText = count
+    count += 1 
+    countEl.innerHTML = count
 }
 
 increment()
 
 
-function save() { /*saves the count you increment, when clicked */
-    console.log(count)
+function save() { /*saves the count you 
+increment, when clicking the button */
+    let countString = count + " - "
+    saveEl.innerHTML += countString
+    /*textContent adds spacing */
+   countEl.innerHTML = 0 /*on save, return count
+   to 0 */
+   count = 0 /* */
+console.log(count)
 
 }
 
-let userName = "Jane"
-let message = "You have three new notifications"
-
-let messageToUser = message + ", " + userName + "!"
-console.log(messageToUser)
 
 
-let myName = "Natalie"
-let greeting = "Hi, my name is " 
 
-let message2 = greeting + myName
 
-console.log(message2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let userName = "Jane"
+// let message = "You have three new notifications"
+
+// let messageToUser = message + ", " + userName + "!"
+// console.log(messageToUser)
+
+
+// let myName = "Natalie"
+// let greeting = "Hi, my name is " 
+
+// let message2 = greeting + myName
+
+// console.log(message2)
+
+// console.log(4+5)
+// console.log("2" + "4")
+// console.log("5" + 1)
+// console.log(100 + "100")
+
+// // 9
+// // 24
+// // 51
+// // 100100
+
+
+
+
+
+
+// //let welcomeEl = theGreeting + theName + "!"
+// //console.log(welcomeEl)
+
+// // let welcomeEl = document.getElementById("welcome-el")
+// // let theName = "Natalie"
+// // let theGreeting = "Welcome back, "
+// // welcomeEl.innerText = theGreeting + theName + "!"
+
+// // //welcomeEl.innerText = welcomeEl.innerText + "😊"
+
+// // /*or */
+
+// // welcomeEl.innerText += "😊"
+
+
+
+
+
 
