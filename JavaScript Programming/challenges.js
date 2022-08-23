@@ -39,22 +39,35 @@ console.log("My points: " + 5 + 9) //My points: 59
 console.log(2 + 2) //4
 console.log("11" + "14") //1114
 
-let errorParagraph = document.getElementById("error")
-
-
-function purchase() {
-    errorParagraph.textContent = "Something went wrong, please try again."
+if (sum < 21) {
+    console.log("Draw another card.")
+}else if (sum === 21) {
+    console.log("You win!")
+} else {
+    console.log("You lose! Try again.")
 }
-purchase()
-
-let num1 = 8
-let num2 = 2
 
 
 
+let age = 21
+
+if (age < 21) {
+    console.log("You cannot enter the club!")
+} else {
+    console.log("Welcome!")
+}
 
 
 
+let age2 = 100
+
+if (age2 === 100) {
+    console.log("Here is your birthday card from the king!")
+} else if (age2 < 100) {
+    console.log("Not eligible.")
+} else {
+    console.log("Not eligible. You have all ready received a card form the king!")
+}
 
 
 
