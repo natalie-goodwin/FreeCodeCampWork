@@ -1,11 +1,14 @@
 let firstCard = 2
 let secondCard = 4
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
 let message = ""
 
-//With message on screen, instead on console:
+//method: a function on an object
+
+//With message on screen, instead of console:
 
 
 let messageEl = document.getElementById("message-el")
@@ -21,7 +24,7 @@ function startGame() {
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards: " + firstCard  + " & " + secondCard
+    cardsEl.textContent = "Cards:" + " " + cards[0] + " & " + cards[1]
     sumEl.textContent = "Sum: " + sum
      if (sum <= 20) {
         message = "Draw another card."        
@@ -41,6 +44,8 @@ function renderGame() {
 function newCard() {
     let card = 3 /*hard coding value */
     sum += card
+    cards.push(card)
+    console.log(cards)
     renderGame() /*call inside the function */
 }
 
