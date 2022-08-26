@@ -1,30 +1,52 @@
-let firstCard = 2
-let secondCard = 4
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false /*you haven't started game, so you aren't alive */
 let message = ""
-
-//method: a function on an object
-
-//With message on screen, instead of console:
-
-
 let messageEl = document.getElementById("message-el")
 //console.log(messageEl)
-//let sumEl = document.getElementById("sum-el")
-let sumEl = document.querySelector("#sum-el") /*more dynamic
-than getElementById; querySelector requires id # symbol */
+let sumEl = document.getElementById("sum-el")
+// let sumEl = document.querySelector("#sum-el") /*more dynamic
+// than getElementById; querySelector requires id # symbol */
 let cardsEl = document.querySelector("#cards-el")
 
+console.log(cards) /*will show empty cards array because game 
+has not started */
+
+
+/*return a random number between 1 and 13 */
+function getRandomCard() {
+            let randomNumber = Math.floor (Math.random() * 13) + 1
+            if (randomNumber > 10) {
+                return 10
+            } else if (randomNumber === 1) {
+                return 11
+            } else {
+                return randomNumber
+            }
+        }
+
 function startGame() {
+    isAlive = true /*player has walked in and is alive */
+    let firstCard = getRandomCard() /*reassigning first and second 
+    cards to random*/
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard] /*cards array initially holds 
+    first and second cards */
+    sum = firstCard + secondCard 
+    /*sum is first and second card added together*/
+
     renderGame() /*we will render game anytime we hit startGame() 
-    and re-render the game through new card */
+    and re-render the game through new card; also generate cards
+    in startGame() */
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards:" + " " + cards[0] + " & " + cards[1]
+    cardsEl.textContent = "Cards: " 
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
+
     sumEl.textContent = "Sum: " + sum
      if (sum <= 20) {
         message = "Draw another card."        
@@ -39,16 +61,17 @@ function renderGame() {
     //sumEl.textContent = sumEl
 }
 
-
-
 function newCard() {
-    let card = 3 /*hard coding value */
-    sum += card
-    cards.push(card)
-    console.log(cards)
+    if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard() /*hard coding value */
+    sum += card   
+    cards.push(card) 
     renderGame() /*call inside the function */
+    }     
 }
 
+/*logical operators allows you to combine multiple conditions
+inside and if statement*/
 
 
 
@@ -57,11 +80,7 @@ function newCard() {
 
 
 
-
-
-
-
-
+//method: a function on an object
 
 /*console.log(hasBlackJack)
 console.log(isAlive)*/
