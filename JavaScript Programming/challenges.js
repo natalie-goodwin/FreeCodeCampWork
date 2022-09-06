@@ -268,6 +268,146 @@ function recommendMovie() {
     console.log("Hey, check out this new film we think you will like!")
 }
 
+/*objects store data in-depth; objects are also called composite
+or complex data types with key-value pairs */
+
+let course = {
+    title: "Learn CSS Grid for free", 
+    lessons: 16, 
+    creator: "Per Harald Borgen",
+    length: 63,
+    level: 2,
+    isFree: true,
+    tags: ["html", "css"]
+}
+console.log(course.title) /*dot notation */
+console.log(course.lessons)
+console.log(course.creator)
+console.log(course.length)
+console.log(course.level)
+console.log(course.isFree)
+console.log(course.tags)
+
+let airBnbCastle = {
+    name: "Princess Isabella's Castle" ,
+    forRent: true,
+    nightlyRent:  150,
+    details: ["date built: abt. 1602", "NRHP listing: 1980"]
+}    
+
+
+console.log(airBnbCastle.name)
+console.log(airBnbCastle.forRent)
+console.log(airBnbCastle.nightlyRent)
+console.log(airBnbCastle.details)
+
+/*methods are functions attached to objects, usually using the
+dot notation */
+
+let aboutMe = {
+    name: "Natalie",
+    age: 41,
+    country: "United States"
+}
+
+function logData() {
+    console.log( aboutMe.name + " is " + aboutMe.age + " years old and lives in the " + aboutMe.country)
+}
+
+logData()
+
+let age = 80
+
+// if (age < 6 ) {
+//     console.log("free") 
+// } else if (age >= 6 && age <= 17) {
+//     console.log("child discount")
+// } else if (age >= 18 && age <= 26) {
+//     console.log("student discount") 
+// } else if (age >= 27 && age <= 66) {
+//     console.log("full price") 
+// } else {
+//     console.log("senior citizen discount") 
+// }
+
+if (age < 6 ) {
+    console.log("free") 
+} else if (age < 18) {
+    console.log("child discount")
+} else if (age < 27) {
+    console.log("student discount") 
+} else if (age < 66) {
+    console.log("full price") 
+} else {
+    console.log("senior citizen discount") 
+}
+
+let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
+
+console.log("The five largest countries in the world: ")
+for (let i = 0; i < largeCountries.length; i++) {
+    console.log("- " + largeCountries[i])
+} /*loops through the names in the array */
+
+let largeCountries2 = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"]
+
+largeCountries2.pop("Monaco")
+console.log(largeCountries2) /*removes Monaco from end of array */
+
+largeCountries2.shift("Tuvalu")
+console.log(largeCountries2) /*removes Tuvalu from front of array */
+
+largeCountries2.push("Pakistan")
+console.log(largeCountries2) /*pushes Pakistan to end of array */
+
+largeCountries2.unshift("China")
+console.log(largeCountries2) /*pushed China to front of array */
+
+let dayOfMonth = 13
+let weekday = "Friday" 
+
+if (dayOfMonth === 13 && weekday === "Friday") {
+    console.log ("😱")
+}
+
+let hands = ["rock", "paper", "scissor"]
+
+// function getHand() {
+//     let randomIndex = Math.random()    
+// } return randomIndex
+
+// console.log(getHand())
+
+function getHand2() {
+    let randomIndex2 = Math.floor (Math.random() * 3) 
+    return hands[randomIndex2]
+}
+console.log(getHand2())  /*returns hands */
+
+
+// sorting fruit by different shelves below
+let fruit = ["🍎", "🔶", "🍎", "🍎", "🔶", "🍌", "🍌","🍌","🍌"]
+let appleShelf = document.getElementById("apple-shelf")
+let orangeShelf = document.getElementById("orange-shelf")
+let bananaShelf = document.getElementById("banana-shelf")
+
+function sortFruit() {
+     for (let i = 0; i <fruit.length; i++) {
+        if (fruit[i] === "🍎") {
+            appleShelf.textContent += "🍎"
+        } else if (fruit[i] === "🔶") {
+            orangeShelf.textContent += "🔶"
+        } else {
+            bananaShelf.textContent += "🍌"
+        }
+     }
+}
+sortFruit()
+
+
+
+
+
 
 
 

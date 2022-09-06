@@ -1,3 +1,9 @@
+
+let player = {
+    name: "Per", 
+    chips: 145
+} /*creating an object with name as the key "Per" as
+the value, and chips as the key and 145 as the value */
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -9,6 +15,9 @@ let sumEl = document.getElementById("sum-el")
 // let sumEl = document.querySelector("#sum-el") /*more dynamic
 // than getElementById; querySelector requires id # symbol */
 let cardsEl = document.querySelector("#cards-el")
+let playerEl = document.getElementById("player-el")
+
+playerEl.textContent = player.name + ": $" + player.chips
 
 console.log(cards) /*will show empty cards array because game 
 has not started */
