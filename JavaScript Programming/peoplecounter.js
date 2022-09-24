@@ -106,9 +106,9 @@ let countEl= document.getElementById("count-el")
 let count = 0
 
 function increment() { /*function to increment 
-a count 
-and attach to button */
-    count += 1 
+a count and attach to button; executed anytime this 
+action is invoked with the onClick event in HTML*/
+    count += 1 //short cut for count = count + 1
     countEl.innerHTML = count
 }
 
