@@ -1,0 +1,10 @@
+body {
+    background: lightskyblue;
+    color: green;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 8px; /*pushes text down toward the center*/
+}
+/*hex color code: #8b4513*/
+/*rgb: 200, 250, 220*/
