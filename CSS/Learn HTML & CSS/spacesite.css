@@ -1,0 +1,40 @@
+body {
+    color: #82a5ca;   
+    background-image: url("andy-holmes-LUpDjlJv4_c-unsplash.jpg");
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    
+} /*buttons don't inherit font families, so they have to 
+be told to do it! */
+
+#hero-section {
+    
+    background-size: cover; /*allows background image to fit on screen */
+    padding: 10px 0 40 px 0;
+}
+.apply-btn{
+      padding: 6px 12px;
+      background: white;
+      border: none;
+      font-family: inherit; /*will inherit font-family from body */
+      color: #82a5ca;
+      font-weight: bold;    
+    }
+
+span {
+    text-decoration: underline;
+}
+
+#nasalogo {
+    width: 120px;
+    border-radius: 90px;
+}
+/*@ font-face: 1001fonts.com; using
+
+@font-face {
+    src: url(""); 
+    font-family: ; 
+    
+    allows us to use fonts from 1001fonts.com*/
+
+
